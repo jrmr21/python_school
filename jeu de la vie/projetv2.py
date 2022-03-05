@@ -21,15 +21,27 @@ from pygame.locals import *
 BLACK = (0 , 0 , 0)
 WHITE = (255 , 255 , 255)
 
+print("WELCOME IN 'JEU DE LA VIE' :")
+print("==========================")
+print()
+
+
+windows_y = 1000
+print (windows_y)
 # create variable to define resolution of windows (we need carre)
-windows_y = 500
 windows_x = windows_y
 
 #   create windows with resolution
 root = p.display.set_mode((windows_x , windows_y))
 
 #create cell :
-number_of_cell = 50 # the real number of cell is : (number_of_cell * number_of_cell)
+# the real number of cell is : (number_of_cell * number_of_cell)
+print("Enter cell number (cell*cell): ")
+n = int(input())
+
+number_of_cell = n
+print (number_of_cell)
+
 size_of_cell = windows_y / number_of_cell
 
 # create cells[number_of_cell][number_of_cell] to display
@@ -119,7 +131,7 @@ while 1:
         if i.type == QUIT:
             quit()    
 
-    time.sleep(0.1)
+    #time.sleep(0.1)
     # frame, refresh display
     p.display.update()
 
